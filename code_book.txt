@@ -1,0 +1,97 @@
+File includes column names with variable descriptions contained within data frame spec_sub_act_feat_all:
+
+'subjects' - a column of numbers from 1 to 30 indicating which subject the data was from
+
+'activitys' - a column of factor variables. There were 6 activities tested. These included:
+	- WALKING
+	- WALKING_UPSTAIRS
+	- WALKING_DOWNSTAIRS
+	- SITTING
+	- STANDING
+	- LAYING
+
+Old column names were derived from a mixture of short terms: t = time measurement , f = Fast Fourier Transform (FFT) , Body = body measurement , Gravity for gravity measurement , Acc = Accelerometer signal , Gyro = gyroscope signal , Jerk = body linear acceleration and angular velocity were derived in time , and Mag = magnitude calculated using the Euclidean norm. For more information on how each column was calculated see below. Each value was normalized to be between (-1,1) and measured in radians per second. The following columns were transformed into more descriptive headings:
+
+'body accelerometer signal...[XYZ]' transformed from 'tBodyAcc-[XYZ]'
+
+'gravity acclerometer signal...[XYZ]' transformed from 'tGravityAcc-[XYZ]'
+
+'jerk body accelerometer signal...[XYZ]' transformed from 'tBodyAccJerk-[XYZ]'
+
+'body gyroscope signal...[XYZ]' transformed from 'tBodyGyro-[XYZ]'
+
+'body jerk gyroscope signal...[XYZ]' transformed from 'tBodyGyroJerk-[XYZ]'
+
+'Magnitude of body accelerometer signal' transformed from 'tBodyAccMag'
+
+'Magnitude of gravity accelerometer signal' transformed from 'tGravityAccMag'
+
+'Magnitude of body jerk acceleromater signal' transformed from 'tBodyAccJerkMag'
+
+'Magnitude of body gyroscope signal' transformed from 'tBodyGyroMag'
+
+'Magnitude of body jerk gyroscope signal' transformed from 'tBodyGyroJerkMag'
+
+'FFT applied to body accelerometer signal...[XYZ]' transformed from 'fBodyAcc-[XYZ]'
+
+'FFT applied to body jerk accelerometer signal...[XYZ]' transformed from 'fBodyAccJerk-[XYZ]'
+
+'FFT applied to body gyroscope signal...[XYZ]' transformed from 'fBodyGyro-[XYZ]'
+
+'Magnitude of FFT applied to body accelerometer signal' transformed from 'fBodyAccMag'
+
+'Magnitude of FFT applied to body jerk accelerometer signal' transformed from 'fBodyBodyAccJerkMag'
+
+'Magnitude of FFT applied to body gyroscope signal' transformed from 'fBodyBodyGyroMag'
+
+'Magnitude of FFT applied to body jerk gyroscope signal' transformed from 'fBodyBodyGyroJerkMag'
+
+The last columns are the vectors between the two variables
+
+'Vector of mean body accelerometer signal and gravity' transformed from 'angle(tBodyAccMean,gravity)'         
+
+'Vector of mean body jerk accelerometer signal and gravity' transformed from 'angle(tBodyAccJerkMean),gravityMean)' 
+
+'Vector of mean body gyroscope signal and gravity' transformed from 'angle(tBodyGyroMean,gravityMean)'    
+
+'Vector of mean body jerk gyroscope signal and gravity' transformed from 'angle(tBodyGyroJerkMean,gravityMean)'
+
+'Vector of gravity mean in [XYZ] direction' transformed from 'angle([XYZ],gravityMean)'
+
+The ... means that the column had either a mean or standard deviation (std) variable. [XYZ] indicates in what direction of the XYZ plane the vector was going.
+
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+The set of variables that were estimated from these signals are: 
+
+mean(): Mean value
+std(): Standard deviation
+mad(): Median absolute deviation 
+max(): Largest value in array
+min(): Smallest value in array
+sma(): Signal magnitude area
+energy(): Energy measure. Sum of the squares divided by the number of values. 
+iqr(): Interquartile range 
+entropy(): Signal entropy
+arCoeff(): Autorregresion coefficients with Burg order equal to 4
+correlation(): correlation coefficient between two signals
+maxInds(): index of the frequency component with largest magnitude
+meanFreq(): Weighted average of the frequency components to obtain a mean frequency
+skewness(): skewness of the frequency domain signal 
+kurtosis(): kurtosis of the frequency domain signal 
+bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
+angle(): Angle between to vectors.
+
+Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
+
+gravityMean
+tBodyAccMean
+tBodyAccJerkMean
+tBodyGyroMean
+tBodyGyroJerkMean
+
+The complete list of variables of each feature vector is available in 'features.txt'
