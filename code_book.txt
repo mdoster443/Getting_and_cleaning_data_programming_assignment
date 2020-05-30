@@ -66,7 +66,7 @@ Subsequently, the body linear acceleration and angular velocity were derived in 
 
 Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
 
-The set of variables that were estimated from these signals are: 
+The set of variables that were estimated from these signals (in original data set) are: 
 
 mean(): Mean value
 std(): Standard deviation
@@ -87,11 +87,5 @@ bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of e
 angle(): Angle between to vectors.
 
 Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
-
-gravityMean
-tBodyAccMean
-tBodyAccJerkMean
-tBodyGyroMean
-tBodyGyroJerkMean
 
 The complete list of variables of each feature vector is available in 'features.txt'
