@@ -138,7 +138,6 @@ names(spec_sub_act_feat_all) <- gsub("angle(Z,gravityMean)" ,
                                      "Vector of gravity mean in Z direction",
                                      names(spec_sub_act_feat_all),fixed=TRUE)
 #(Prompt 4) renames columns to more descriptive variable names derived from 
-#features_info and the README file
 tidydata_avgs <- spec_sub_act_feat_all %>% group_by(subjects,activitys) %>% 
                         summarize_all(mean) %>% ungroup
 #(Prompt 5) creates second tidy data set with the mean of each column value based
